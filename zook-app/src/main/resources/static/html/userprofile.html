@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="../css/userProfileStyles.css" />
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+    <title>Your Profile</title>
+    <link rel="icon" href="../media/zooklogo.jpg">
+
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+</head>
+
+<body style="background-color: #aebc9e;">
+
+	<nav class="navbar navbar-dark bg-dark">
+		<!-- Navbar content -->
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#"> <img
+				src="../media/zooklogo.jpg" alt="" width="30" height="24"
+				class="d-inline-block align-text-top"> ZOOK&#8482;
+			</a>
+
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" href="#">Your Profile</a></li>
+					<li class="nav-item dropdown"><button class="nav-link active button-solid"
+						id="logout" aria-current="page" href="http://localhost:9039/">Logout</button></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+        <div class="profile-page tx-13">
+            <div class="row">
+                <div class="col-12 grid-margin">
+                    <div class="profile-header">
+                        <div class="cover">
+                            <div class="gray-shade"></div>
+                            <figure>
+                                <img src="../media/zootopia_city.jpg" class="img-fluid" alt="profile cover">
+                            </figure>
+                            <div class="cover-body d-flex justify-content-between align-items-center">
+                                <div>
+                                    <img id="profile pic" class="profile-pic"
+                                        src="data:image/jpeg;base64,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"
+                                        alt="profile">
+                                    <span id="user name" class="profile-name"></span>
+                                    <div id="user id" style="display:none"></div>
+                                    <div id="display id" style="display:none"></div>
+                                </div>
+                                <div class="d-none d-md-block btn-group dropleft">
+                            <button class="btn btn-primary btn-icon-text btn-edit-profile" id ="editProfileButton"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit btn-icon-prepend">
+                                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                </svg> Edit profile
+                            </button>
+                            
+                            <div class="dropdown-menu">
+                                <form class="px-4 py-3">
+                                  <div class="form-group">
+                                    <label for="exampleDropdownFormEmail1">First name</label>
+                                    <input type="text" class="form-control" id="ePFName" placeholder="First name">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="exampleDropdownFormPassword1">Last name</label>
+                                    <input type="text" class="form-control" id="ePLName" placeholder="Last name">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="exampleDropdownFormPassword1">Bio</label>
+                                    <input type="text" class="form-control" id="ePBio" placeholder="Bio">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="exampleDropdownFormPassword1">Species</label>
+                                    <input type="text" class="form-control" id="ePSpecies" placeholder="Species">
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="exampleDropdownFormPassword1">Profile picture</label>
+                                    <input type="text" class="form-control" id="ePProfilePicture" placeholder="Profile picture">
+                                  </div>
+
+
+                                  <button type="submit" class="btn btn-primary" id="updatebutton">Update</button>
+                                </form>
+                                <div class="dropdown-divider"></div>
+                                
+                              </div>
+                              
+                        </div>
+                            </div>
+                        </div>
+
+
+                        <div class="header-links">
+                            <ul class="links d-flex align-items-center mt-3 mt-md-0">
+                                <li class="header-link-item d-flex align-items-center active">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-columns mr-1 icon-md">
+                                        <path
+                                            d="M12 3h7a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-7m0-18H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7m0-18v18">
+                                        </path>
+                                    </svg>
+                                    <a class="pt-1px d-none d-md-block" href="#">Timeline</a>
+                                </li>
+                                <li class="header-link-item ml-3 pl-3 border-left d-flex align-items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-user mr-1 icon-md">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg>
+                                    <a class="pt-1px d-none d-md-block" href="#">My Profile</a>
+                                </li>
+                                <li class="header-link-item ml-3 pl-3 border-left d-flex align-items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="feather feather-users mr-1 icon-md">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                    <a class="pt-1px d-none d-md-block" href="#">Friends <span id= "friend count"
+                                            class="text-muted tx-12">3,765</span></a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end of header -->
+            <div class="row profile-body">
+                <!-- left wrapper start -->
+                <div class="d-none d-md-block col-md-4 col-xl-3 left-wrapper">
+                    <div class="card rounded">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center justify-content-between mb-2">
+                                <h6 class="card-title mb-0">About</h6>
+                                <div class="dropdown">
+                                    <button class="btn p-0" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="feather feather-more-horizontal icon-lg text-muted pb-3px">
+                                            <circle cx="12" cy="12" r="1"></circle>
+                                            <circle cx="19" cy="12" r="1"></circle>
+                                            <circle cx="5" cy="12" r="1"></circle>
+                                        </svg>
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-edit-2 icon-sm mr-2">
+                                                <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z">
+                                                </path>
+                                            </svg> <span class="">Edit</span></a>
+                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-git-branch icon-sm mr-2">
+                                                <line x1="6" y1="3" x2="6" y2="15"></line>
+                                                <circle cx="18" cy="6" r="3"></circle>
+                                                <circle cx="6" cy="18" r="3"></circle>
+                                                <path d="M18 9a9 9 0 0 1-9 9"></path>
+                                            </svg> <span class="">Update</span></a>
+                                        <a class="dropdown-item d-flex align-items-center" href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round"
+                                                class="feather feather-eye icon-sm mr-2">
+                                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                                <circle cx="12" cy="12" r="3"></circle>
+                                            </svg> <span class="">View all</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <p id="user bio">Write something about yourself if you want.</p>
+                            
+                            <div class="mt-3">
+                                <label class="tx-11 font-weight-bold mb-0 text-uppercase">Species:</label>
+                                <p id="user species" class="text-muted">Fluffiest Cow</p>
+                            </div>
+                            <div class="mt-3">
+                                <label class="tx-11 font-weight-bold mb-0 text-uppercase">Email:</label>
+                                <p id="user email" class="text-muted">email@gmail.com</p>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- left wrapper end -->
+                <!-- middle wrapper start -->
+                <div class="col-md-8 col-xl-6 middle-wrapper">
+
+                    <div class="row">
+                        <!-- user's posts are inside this div -->
+                        <div class="col-md-12 grid-margin">
+                            <div class="tab-content profile-tabs-content">
+                                <div class="tab-pane active" id="profile-overview" role="tabpanel">
+
+                                    <!-- ######### POST EDITOR BOX ######### -->
+                                    <div class="post-editor" id="post-editor">
+                                        <!-- PICS & YOUTUBE VIDEOS ARE DISPLAYED HERE VIA DOM MANIPULATION. -->
+                                        <!-- USER'S UPLOADED PHOTO -->
+                                        <div id="current image">
+                                            <img style="display:none" id="new image" alt="your picture soon"
+                                                width=99% />
+                                        </div>
+
+                                        <!-- YOUTUBE EMBEDED PLAYER -->
+                                        <div id="player"></div>
+
+                                        <div id="post-editor-content-box">
+
+                                            <h3>Upload a Photo for Your Friends!</h3>
+                                            <input type="file" id="input">
+                                            <div><button id="upload picture">Upload Picture</button></div>
+                                            
+                                            <br>
+
+                                            <h3>Share a YouTube Video!</h3>
+                                            <form>
+                                                <label for="youtubeLink">Post your link here</label>
+                                                <input type="text" id="youtubeLink" name="youtubeLink"><br><br>
+                                            </form>
+                                            <button id="uploadLink">Upload YouTube Video</button>
+
+                                        </div>
+                                        <textarea name="post-field" id="post-field" class="post-field"
+                                            placeholder="Share Something Cool!">
+                                        </textarea>
+                                        <div class="d-flex">
+                                            <button id="post-button" class="btn btn-success px-4 py-1">Post</button>
+                                        </div>
+                                    </div>
+                                    <!-- ################################ -->
+                                </div>
+                            </div>
+                            <!-- start of user post - card -->
+                            <div id="postDom" class="card rounded">
+                               
+                            </div>
+                            <!-- end of user post? -->
+                        </div>
+                    </div>
+                </div>
+        <div class="d-none d-xl-block col-xl-3 right-wrapper" id="rightWrapper">       
+            
+            <div class="row">
+
+                <div class="col-md-12 grid-margin">
+                <div class="card rounded" style = "height:400px; overflow: scroll">
+                <div class="table-responsive{-sm}" >
+                <table id = "friendtable" class = "table table-hover">
+                <tbody id ="usertable"></tbody>
+				</table> 
+				
+			
+</div>
+</div>
+             
+<!-- 
+            <h1></h1>
+                <div class="col-md-12 grid-margin"> -->
+                </div>
+            </div>
+        </div>
+            </div>
+            
+        </div>
+        <!-- middle wrapper end -->
+        <!-- right wrapper start -->
+        <!-- right wrapper end -->
+    </div>
+    </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../javascript/userprofile.js"></script>
+    <script src="../javascript/youtubeApi.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

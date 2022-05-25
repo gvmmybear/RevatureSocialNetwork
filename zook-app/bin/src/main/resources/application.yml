@@ -1,0 +1,84 @@
+server:
+  port: 9039
+  
+spring:
+  autoconfigure:
+    exclude:
+      - org.springframework.cloud.aws.autoconfigure.context.ContextInstanceDataAutoConfiguration
+      - org.springframework.cloud.aws.autoconfigure.context.ContextStackAutoConfiguration
+      - org.springframework.cloud.aws.autoconfigure.context.ContextRegionProviderAutoConfiguration 
+  datasource:
+    url: jdbc:postgresql://database.cxrczaaoj4zv.us-east-1.rds.amazonaws.com/project2
+    username: kpthellama
+    password: p4ssw0rd
+    driver-class-name: org.postgresql.Driver
+  jpa: 
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    hibernate: 
+      ddl-auto: none
+
+
+document:
+  bucket-name: project2-air-benders
+cloud:
+  aws:
+    region:
+      static: us-east-1
+      auto: false
+    credentials:
+      access-key: AKIASM6QMHDZH6M7NPCN
+      secret-key: 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
+
+logging:
+  level:
+    com:
+      amazonaws:
+        util:
+          EC2MetadataUtils: error
+
+
+
+# christians database stuff...I am gonna leave this here in case I need to see db stuff
+# that way I can quickly switch to my db if needed.
+#server:
+#  port: 9039
+#  
+#spring:
+#  autoconfigure:
+#    exclude:
+#      - org.springframework.cloud.aws.autoconfigure.context.ContextInstanceDataAutoConfiguration
+#      - org.springframework.cloud.aws.autoconfigure.context.ContextStackAutoConfiguration
+#      - org.springframework.cloud.aws.autoconfigure.context.ContextRegionProviderAutoConfiguration 
+#  datasource:
+#    url: jdbc:postgresql://datacastro.csdyaviwpvyh.us-west-1.rds.amazonaws.com/project2
+#    username: datacastro
+#    password: p4ssw0rd
+#    driver-class-name: org.postgresql.Driver
+#  jpa: 
+#    database-platform: org.hibernate.dialect.PostgreSQLDialect
+#    show-sql: true
+#    hibernate: 
+#      ddl-auto: none 
+#      
+#document:
+#  bucket-name: project2-air-benders-castro
+#cloud:
+#  aws:
+#    region:
+#      static: us-west-1
+#      auto: false
+#    credentials:
+#      access-key: AKIAWF5HYF4OZU3DEZ5H
+#      secret-key: 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
+#
+#logging:
+#  level:
+#    com:
+#      amazonaws:
+#        util:
+#          EC2MetadataUtils: error   
+      
+      
+      
+      

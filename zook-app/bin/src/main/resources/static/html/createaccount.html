@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="http://localhost:9039/css/createAccountStyles.css">
+<!-- Font Awesome -->
+<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+	rel="stylesheet" />
+<!-- Google Fonts -->
+<link
+	href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+	rel="stylesheet" />
+<!-- MDB -->
+<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.css"
+	rel="stylesheet" />
+</head>
+<body>
+	<div class="bg-image"
+		style="background-image: url('http://localhost:9039/media/zootopia_city.jpg'); height: 135vh">
+
+
+		<div class="container py-5 h-100">
+			<div
+				class="row d-flex justify-content-center align-items-center h-100">
+				<div class="col col-xl-10" id="formCard">
+					<div class="card" style="border-radius: 1rem;">
+						<div class="row g-0">
+							<div class="col-md-6 col-lg-5 d-none d-md-block">
+								
+							</div>
+							<div class="col-md-6 col-lg-7 d-flex align-items-center">
+								<div class="card-body p-4 p-lg-5 text-black">
+
+									<!-- <form method="POST" action="/Project1.0/login/login"> -->
+                                    <form method="POST">
+										<div class="d-flex align-items-center mb-3 pb-1">
+											<span class="h1 fw-bold mb-0">Create An Account</span>
+										</div>
+
+										<h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Enter your information below</h5>
+
+                                        <div class="form-outline mb-4">
+											<input type="text" id="firstName" name="firstName"
+												class="form-control form-control-lg" /> <label
+												class="form-label" for="form2Example17">First Name</label>
+										</div>
+
+                                        <div class="form-outline mb-4">
+											<input type="text" id="lastName" name="lastName"
+												class="form-control form-control-lg" /> <label
+												class="form-label" for="form2Example17">Last Name</label>
+										</div>
+
+										<div class="form-outline mb-4">
+											<input type="text" id="userEmail" name="userEmail"
+												class="form-control form-control-lg" /> <label
+												class="form-label" for="form2Example17">Email
+												address</label>
+										</div>
+
+										<div class="form-outline mb-4">
+											<input type="password" id="myPassword" name="myPassword"
+												class="form-control form-control-lg" /> <label
+												class="form-label" for="form2Example27">Password</label>
+										</div>
+
+                                        <div class="form-outline mb-4">
+											<input type="password" id="confirmPassword" name="confirmPassword"
+												class="form-control form-control-lg" /> <label
+												class="form-label" for="form2Example27">Confirm Password</label>
+                                        </div>
+                                            <p id="pwconfirm"></p>
+
+                                        <div class="form-outline mb-4">
+											<input type="text" id="species" name="species"
+												class="form-control form-control-lg" /> <label
+												class="form-label" for="form2Example27">Enter Your Species</label>
+										</div>
+
+										<div class="pt-1 mb-4">
+											<input id="submitInfo" class="btn btn-dark btn-lg btn-block" type="submit"
+												action="" value="Create New Account">
+											
+										</div>
+										<a href="#!" class="small text-muted">Terms of use.</a>
+										<a href="#!" class="small text-muted">Privacy policy</a>
+										
+
+									</form>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- 		this is the log out button
+
+		
+		<form method="GET" action="/Project1.0/login/logout">
+			<p>Log Out</p>
+			<input type="submit" value="Log out"/>
+		</form>
+		
+	</div> -->
+	<!-- MDB -->
+	<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.js"></script>
+        <script src="http://localhost:9039/javascript/createAccount.js"></script>
+</body>
+</html>

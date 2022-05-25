@@ -1,0 +1,96 @@
+/* image[class="card-img-top"]{
+    width: 50%;
+    height: 50%;
+    margin: 45%;
+} */
+.zooklogo{
+    height: 50px;
+    width: 50px;
+    border-style: outset;
+}
+
+.right {
+    /* margin-left: 75%; */
+    position: absolute;
+    right: -350px;   
+    width: 60%;
+}
+
+/* .left {
+    align-self: auto;
+} */
+
+header{
+    background-color: #0e6b4e;
+    height: 100px;
+    width:90%;
+    margin-left: auto;
+    margin-right: auto;
+    /* curved borders */
+    border-radius: 42px 42px 42px 42px;
+    -moz-border-radius: 42px 42px 42px 42px;
+    -webkit-border-radius: 42px 42px 42px 42px;
+    border: 0px solid #000000;
+    padding: 20px;
+    border-style: outset;
+
+    /* box shadows */
+    -webkit-box-shadow: 0px 15px 51px 32px rgba(0,0,0,0.69);
+    -moz-box-shadow: 0px 15px 51px 32px rgba(0,0,0,0.69);
+    box-shadow: 0px 15px 51px 32px rgba(0,0,0,0.69);
+}
+
+nav[class="navbar navbar-expand-lg navbar-light bg-light"]{
+    border-radius: 45px 45px 45px 45px;
+    -webkit-box-shadow: 0px 15px 105px -3px rgba(0,0,0,0.69);
+    -moz-box-shadow: 0px 15px 105px -3px rgba(0,0,0,0.69);
+    box-shadow: 0px 15px 105px -3px rgba(0,0,0,0.69);
+    border-style: outset;
+}
+
+.background{
+    background: rgba(226,226,226,1);
+    background: -moz-linear-gradient(-45deg, rgba(226,226,226,1) 0%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(226,226,226,1)), color-stop(51%, rgba(209,209,209,1)), color-stop(100%, rgba(254,254,254,1)));
+    background: -webkit-linear-gradient(-45deg, rgba(226,226,226,1) 0%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(226,226,226,1) 0%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(226,226,226,1) 0%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
+    background: linear-gradient(135deg, rgba(226,226,226,1) 0%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=1 );
+    
+}
+
+#outer {
+    
+    background-color: rgba(128,203,184,1);
+    
+    /* curved borders */
+    border-radius: 67px 67px 67px 67px;
+    -moz-border-radius: 67px 67px 67px 67px;
+    -webkit-border-radius: 67px 67px 67px 67px;
+    border: 0px solid #000000;
+    /* box shadowing */
+    -webkit-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 6px 6px 5px 0px rgba(0,0,0,0.75);
+    /* margin-left: auto;
+    margin-right: auto; */
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+div[class="card mb-3"]{
+    width: 35%;
+    height: 35%;
+
+    /* Box shadowing */
+    -webkit-box-shadow: 14px 11px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 14px 11px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 14px 11px 5px 0px rgba(0,0,0,0.75);
+
+    /* curved edges/borders */
+    border-radius: 26px 26px 26px 26px;
+    -moz-border-radius: 26px 26px 26px 26px;
+    -webkit-border-radius: 26px 26px 26px 26px;
+    border: 0px solid #000000;
+}
